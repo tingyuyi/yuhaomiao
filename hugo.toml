@@ -1,0 +1,74 @@
+baseURL = 'https://example.com/'
+languageCode = 'zh-cn'
+title = '宇浩渺AI探索'
+theme = 'stack'
+
+# 启用Git信息
+enableGitInfo = true
+
+# 主题配置
+[params]
+  mainSections = ['post']
+  featuredImageField = 'image'
+  rssFullContent = true
+  favicon = '/favicon.ico'
+
+  [params.footer]
+    since = 2023
+    customText = ''
+
+  [params.dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02 15:04 MST"
+
+  [params.sidebar]
+    emoji = "🚀"
+    subtitle = "专注于AI技术的探索与分享"
+
+  [params.sidebar.avatar]
+    enabled = true
+    local = true
+    src = "img/avatar.png"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = -100
+    [menu.main.params]
+      icon = "home"
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about"
+    weight = -90
+    [menu.main.params]
+      icon = "user"
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives"
+    weight = -70
+    [menu.main.params]
+      icon = "archives"
+
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search"
+    weight = -60
+    [menu.main.params]
+      icon = "search"
+
+[markup.highlight]
+  noClasses = false
+  lineNos = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
