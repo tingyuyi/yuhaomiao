@@ -6,6 +6,10 @@ theme = 'stack'
 # 启用Git信息
 enableGitInfo = true
 
+# 添加时间相关配置
+[frontmatter]
+  lastmod = ['lastmod', ':git', ':fileModTime', ':default']
+
 # 主题配置
 [params]
   mainSections = ['post']
